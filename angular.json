@@ -5,7 +5,13 @@
   "projects": {
     "change-detection-example": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular": {
+          "component": {
+            "spec": false
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -119,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "change-detection-example"
+    }
+  },
+  "defaultProject": "change-detection-example",
+  "cli": {
+    "analytics": false
+  }
 }
