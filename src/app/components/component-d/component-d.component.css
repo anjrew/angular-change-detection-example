@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  position: relative;
+  background-color: pink;
+  border: solid black 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}

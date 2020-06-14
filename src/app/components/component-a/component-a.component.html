@@ -1,4 +1,6 @@
-<p>component-a works!</p>
-<app-component-b [testBinding]="childTestBinding"></app-component-b>
+<p id="A">component-a works!</p>
+<app-component-b #child [testBinding]="childTestBinding"></app-component-b>
 <ng-content></ng-content>
 <button type="button" (click)="testBinding = !testBinding">Change Component A binding</button>
+<button type="button" (click)="changeChildBinding()">Change the Component child binding</button>
+

@@ -1,0 +1,10 @@
+:host {
+  position: relative;
+  color: black;
+  background-color: yellow;
+  border: solid black 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+}

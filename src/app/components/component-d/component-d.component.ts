@@ -8,6 +8,8 @@ import {
   AfterViewInit,
   Input,
   SimpleChanges,
+  ViewChild,
+  ElementRef,
 } from '@angular/core';
 
 @Component({
@@ -22,13 +24,16 @@ export class ComponentDComponent
     AfterContentChecked,
     AfterContentInit,
     AfterViewChecked,
-    AfterViewInit {
+  AfterViewInit {
+
   @Input() testBinding: boolean;
 
   private childTestBinding;
 
   /** This is the constructor and this is fired before any of the input or output values are accessible and have been obtained */
-  constructor() {
+  constructor(
+    private elementRef: ElementRef
+  ) {
     console.log(
       ` %c D constructor firing in ComponentD with 'testBinding' Value of '${this.testBinding}'`,
       `background: orange; padding: 20px; border-radius: 5px`,

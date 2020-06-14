@@ -1,2 +1,5 @@
-<p>component-b works!</p>
-<app-component-c></app-component-c>
+
+<p id="B">component-b works!</p> <div> INCOMING BINDING VALUE TO B IS {{testBinding}}</div>
+
+<button (click)="changePropertyOfObjectBinding()" style="margin: 20px;">Change property of object binding</button>
+<app-component-c #child [objectBinding]="childObjectBinding"></app-component-c>

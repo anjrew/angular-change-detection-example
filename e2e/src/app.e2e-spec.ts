@@ -8,9 +8,17 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it(`should have 'A' button`, () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('change-detection-example app is running!');
+    expect(page.getAText()).toEqual('component-a works!');
+  });
+  it(`should have 'B' button`, () => {
+    page.navigateTo();
+    expect(page.getBText()).toEqual('component-b works!');
+  });
+  it(`should have 'C' button`, () => {
+    page.navigateTo();
+    expect(page.getDText()).toEqual('component-d works!');
   });
 
   afterEach(async () => {

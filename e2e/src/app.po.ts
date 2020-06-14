@@ -5,7 +5,14 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<unknown>;
   }
 
-  getTitleText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+  getAText(): Promise<string> {
+    return element(by.css('#A')).getText() as Promise<string>;
   }
+  getBText(): Promise<string> {
+    return element(by.css('#B')).getText() as Promise<string>;
+  }
+  getDText(): Promise<string> {
+    return element(by.css('#D')).getText() as Promise<string>;
+  }
+
 }
